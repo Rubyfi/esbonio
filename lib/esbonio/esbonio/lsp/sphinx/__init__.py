@@ -245,7 +245,7 @@ class SphinxLanguageServer(RstLanguageServer):
                 self.set_diagnostics("sphinx", doc, diagnostics)
 
         self.sync_diagnostics()
-
+        print("Sending build complete notification")
         self.send_notification(
             "esbonio/buildComplete",
             {
